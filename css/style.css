@@ -1,0 +1,477 @@
+@font-face {
+    font-family: 'GmarketSansLight';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GmarketSansMedium';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GmarketSansBold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+} 
+
+/*reset*/
+*{margin:0; padding:0; box-sizing: border-box;}
+li{list-style: none;}
+body{ 
+	/*font-size:16px;*/
+    font-family: 'GmarketSansMedium';
+	background:url("../img/BG.jpg");
+}
+
+.hidden{
+    display:none;
+}
+
+/*로그인폼*/
+#login-bg{
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:800;
+}
+
+#login-form{
+    position:absolute;
+    width:500px; height:300px;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    color:#ffffff;
+    z-index:900;
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+}
+
+#login-form p{
+    width:100%;
+    text-align:center;
+    font-size: 50px;
+    display:block;
+    margin-bottom:20px;
+}
+
+#login-form input{
+    display:block;
+    text-align: center;
+    width:100%;
+    height:40px;
+    border:none;
+    border-radius:5px;
+    margin:5px 0;
+}
+
+#login-form input:last-child:hover{
+    background:#3064ff;
+    color:#fff;
+}
+
+
+/*container*/
+#container{
+    display:grid;
+    width:90vw;
+    margin:5vh 5vw;
+    height:90vh;
+    grid-gap:10px;
+    grid-template-columns:0.5fr 0.8fr 1.2fr;
+}
+
+.section{
+    width:100%;
+    background:rgba(255,255,255,0.4);
+    border-radius:5px;    
+}
+
+/*section1*/
+#section1{
+    display:grid;
+    grid-template-rows: 1.5fr 0.5fr 1fr;
+    grid-gap:10px;
+}
+
+#day_section{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap:10px;
+    box-sizing: border-box;
+}
+#day_section div{
+    display:flex;
+    flex-flow:column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+#day_section div .tit_txt{
+    font-size: 22px;
+    text-align:center;
+    margin-bottom:15px;
+    font-weight: 500;
+}
+
+#today_date{
+    border-bottom:1px solid #eaeaea;
+}
+#today_date p:last-child span{
+    border-radius: 5px;
+    font-size: 50px;
+    color:#000000;
+    font-weight: 300;
+}
+#today_date p:last-child span.today_month{
+    font-family: 'GmarketSansLight';
+}
+#today_date p:last-child span.today_day{
+    font-family: 'GmarketSansBold';
+}
+
+#Dday p:last-child{
+    display:flex;
+    flex-flow:row;
+    justify-content: center;
+    align-content: center;
+}
+#Dday p:last-child span{
+    font-size: 50px;
+    line-height:50px;
+    text-align:center;
+    font-family: 'GmarketSansLight';
+}
+#Dday p:last-child span:last-child{
+    font-size: 50px;
+    line-height:50px;
+    text-align:center;
+    font-family: 'GmarketSansBold';
+}
+
+
+#title_container{
+    font-size: 40px;
+    font-family: 'GmarketSansLight';
+    text-align:center;
+    display : flex;
+    flex-direction: row;
+    gap:10px;
+    justify-content: space-between;
+    align-content: center;
+}
+#title_container span{
+    background:#ffffff;
+    border-radius: 5px;
+    height:100%; width:33%;
+    box-sizing: border-box;
+    padding-top:30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center 22%;
+}
+#title_container span.hours{
+    background-image: url(../img/hour_bg.png);
+}
+#title_container span.minutes{
+    background-image: url(../img/min_bg.png);
+}
+#title_container span.seconds{
+    background-image: url(../img/sec_bg.png);
+}
+
+#weather{
+    font-size:18px;
+	text-align: left;
+    box-sizing: border-box;
+    padding:10px;
+    display : flex;
+    flex-direction: column;
+    align-items : flex-start;
+    justify-content : center;
+
+    background-repeat: no-repeat;
+    background-size:50%;
+    background-position: 100% 100%;
+}
+#weather p{
+    margin: 10px 0;
+    font-size:16px;
+}
+#weather p.weather{
+    font-size:18px;
+    margin:0;
+    color:#102153;
+}
+#weather .temp{
+    font-size: 50px;
+    line-height:50px;
+    font-family: 'GmarketSansMedium';
+}
+
+
+/*section2*/
+#section2{
+    display:grid;
+    grid-template-rows: 0.8fr 1.2fr;
+    grid-gap:10px;
+}
+
+/*playlist*/
+.playlist{
+    width:100%;
+    border-radius:5px;
+    box-sizing: border-box;
+    padding:5px;
+    background:rgba(255,255,255,0.6);
+}
+.playlist .songTitle{
+    text-align: center;
+    margin-top:30px;
+    font-size:24px;
+}
+.playlist img.LPImg{
+    width:40%;
+    margin:25px 30%;
+}
+.controller{
+    width:70%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0 15%;
+}
+.controller button{
+    border:none;
+    background:none;
+}
+.controller button img{
+    cursor: pointer;
+    width:40px; height:40px;
+}
+.controller .playPause .img{
+    box-shadow:5px 5px rgba(0,0,0,0.3);
+}
+.controller .playPause .pauseBtn{
+    display:none;
+}
+
+/*calculator*/
+#calculator{
+    width:100%;
+    background:#eaeaea;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding:5px;
+    display:flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    column-gap: 5px;
+}
+.indicate_number{
+    width:70%;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-between;
+    row-gap: 10px;
+}
+.indicate_number > * {
+    box-sizing: border-box;
+    border:none;
+    width:100%; height:25%;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    padding:10px;
+}
+.indicate_number p{
+    height:50%;
+    background:#f7f7f7;
+    font-size: 20px;
+    color:#666666;
+}
+.indicate_number input:placeholder-shown{
+    color:#eaeaea;
+}
+.operator{
+    width:30%;
+    display: grid;
+    grid-row-gap:10px;
+}
+.operator button{
+    border-radius: 5px;
+    border:none;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    background-color:#8289d7;
+    color:#ffffff;
+    cursor: pointer;
+}
+.operator button.btn_result, .operator button.btn_reset{
+    background-color: #5a6395;
+}
+
+/*todolist*/
+#contents{
+    width:100%;
+    background:rgba(255,255,255,0.6);
+    border-radius: 5px;
+}
+
+#contents h4{
+    display:block;
+    font-size: 30px;
+    text-align:center;
+    margin:10px 0;
+}
+
+#todo-form input{
+    display:block;
+    text-align: center;
+    margin:0 auto 10px auto;
+    width:100%; height:40px;
+    border:none;
+    border-radius:5px
+}
+
+#todo-list{
+    display:block;
+    text-align: center;
+    margin:0 auto;
+    width:80%;
+}
+
+#todo-list li{
+    text-align:left;
+    list-style:none;
+    line-height:35px;
+}
+
+#todo-list li button{
+    width:30px; height:20px;
+    text-align:center;
+    margin-right:8px;
+    border:none;
+    background:#fff;
+    border-radius:3px;
+
+}
+
+#todo-list li span{
+    height:1em;
+    font-family: 'NanumSquareNeo-Variable';
+    font-weight:light;
+}
+
+
+@media (min-width:768px) and (max-width: 1024px){ /*mobile*/
+    /*container*/
+    #container{
+        grid-template-columns:0.7fr 1.3fr;
+    }
+    #section2{
+        display:none;
+    }
+}
+
+@media (max-width:767px){
+    /*container*/
+    #container{
+        height:auto;
+        grid-template-columns:1fr;
+    }
+
+    #section1{
+        grid-template-rows: auto;
+    }
+    #day_section{
+        display:grid;
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:1px;
+        padding:10px 0;
+    }
+    #today_date{
+        border-bottom:none;
+        border-right:1px solid #eaeaea;
+    }
+    #day_section div .tit_txt{
+        margin-bottom:5px;
+    }
+    #day_section div#Dday .tit_txt{
+        margin-bottom:0;
+        margin-top:5px;
+    }
+    #today_date p:last-child span,#Dday p:last-child span,#Dday p:last-child span:last-child{
+        font-size:35px;
+        margin-top:0;
+    }
+    #title_container{
+        display:none;
+    }
+    #weather{
+        padding:10px 20px 10px 20px;
+        background-size:30%;
+        background-position: 87% center;
+    }
+
+    #section2{
+        display:grid;
+        grid-template-rows: 150px 300px;
+    }
+    .playlist{
+        display:grid;
+        grid-template-areas: 
+        "LPimg songTitle ·"
+        "LPimg controller controller";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height:150px;
+        box-sizing: border-box;
+        padding:0;
+    }
+    .playlist .songTitle{
+        grid-area:songTitle;
+        text-align: left;
+    }
+    .playlist img.LPImg{
+        grid-area:LPimg;
+        display:inline-block;
+        width:auto; height:80%;
+        margin:8% 30px;
+        vertical-align: middle;
+        
+    }
+    .playlist .controller{
+        grid-area:controller;
+        margin:0;
+    }
+    .controller button img{
+        width:44px; height: 44px;
+    }
+    .controller .playPause{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

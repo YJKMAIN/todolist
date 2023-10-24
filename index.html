@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+    <div id="section1">
+        <div id="day_section" class="section">
+            <div id="today_date">
+                <p class="tit_txt">Today is</p>
+                <p>
+                    <span class="today_month"></span>
+                    <span class="today_day"></span>
+                </p>
+            </div><!--오늘날짜--> 
+            <div id="Dday">
+                <p class="tit_txt">Until 2023</p>
+                <p>
+                    <span>D-</span>
+                    <span></span>
+                </p>
+            </div><!--디데이-->
+        </div>  
+        <h1 id="title_container" class="section">
+            <span class="hours"></span>
+            <span class="minutes"></span>
+            <span class="seconds"></span>
+        </h1><!--시간--> 
+        <div id="weather" class="section">
+            <p>Hello&nbsp<span class="username"></span>&nbspin&nbsp<span class="city">weather</span></p>
+            <p><span class="temp"></span><span>℃</span></p>
+            <p class="weather"></p>
+        </div><!--날씨-->
+    </div>
+
+    <div id="section2">
+        <div class="playlist" class="section">
+            <h1 class="songTitle">노래 제목</h1>
+            <img class="LPImg" src="img/LP.png" alt="LP">
+            
+            <audio id="audio" class="play" src="audio/flowers.mp3" autoplay></audio>
+            
+            <div class="controller">
+                <button class="prevSong"><img src="img/prev-buttton.png" alt="이전곡 아이콘"></button>
+                <div class="playPause">
+                    <button class="playBtn"><img src="img/play-buttton.png" alt="이전곡 아이콘"></button>
+                    <button class="pauseBtn"><img src="img/pause-buttton.png" alt="이전곡 아이콘"></button>
+                </div>
+                <button class="nextSong"><img src="img/next-buttton.png" alt="이전곡 아이콘"></button>
+            </div>
+        </div><!--playlist-->
+        <form id="calculator" class="section">
+            <div class="indicate_number">
+                <input type="text" class="num1" placeholder="Please enter the first number">
+                <input type="text" class="num2" placeholder="Please enter the last number">
+                <p class="calcResult">The result is</p>
+            </div>
+    
+            <div class="operator">
+                <button type="reset" class="btn_reset">RESET</button>
+                <button type="button" class="btn_plus">+</button>
+                <button type="button" class="btn_minus">-</button>
+                <button type="button" class="btn_multiple">*</button>
+                <button type="button" class="btn_divide">/</button>
+                <button class="btn_result">=</button>
+            </div>
+        </form><!--calculator-->
+    </div>
+
+    <div id="contents" class="section">
+        <h4>Todolist</h4>
+        <form id="todo-form">
+            <input type="text" placeholder="Writing Things to do!!">
+        </form>
+        
+        <ul id="todo-list"></ul>
+    </div>
+</div><!--container end-->
+
+
+
+<form id="login-form" class="hidden">
+        <p>what's your name??</p>
+        <input required maxlength="15" type="text" placeholder="write your name" />
+        <input type="submit" value="logIn" />
+</form>
+<div id="login-bg"></div>
+    
+
+
+    <script src="js/greeting.js"></script>
+    <script src="js/dday.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/audio.js"></script>
+</body>
+</html>
